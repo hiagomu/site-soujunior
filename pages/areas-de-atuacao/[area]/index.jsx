@@ -141,6 +141,8 @@ const AreaItem = () => {
               alt={`foto de perfil ${areaItem.head.name}`}
               width={532}
               height={532}
+              placeholder="blur"
+              blurDataURL={areaItem.head["image-profile"]}
             />
           </div>
 
@@ -215,7 +217,7 @@ const AreaItem = () => {
             .sort((a, b) => (a.nome > b.nome ? 1 : -1))
             .map(({ id, nome, role, img, linkedin, discord }) => (
               <div key={nome} className={styles.headerWrapper}>
-                <Image src={img} width={100} height={100} />
+                <Image src={img} width={100} height={100} placeholder="blur" blurDataURL={img} />
                 <div className={styles.team}>
                   <p>{nome}</p>
                   <p>{role}</p>
@@ -253,7 +255,7 @@ const AreaItem = () => {
             .sort((a, b) => (a.nome > b.nome ? 1 : -1))
             .map(({ id, nome, role, img, linkedin, discord }) => (
               <div key={nome} className={styles.headerWrapper}>
-                <Image src={img} width={100} height={100} />
+                <Image src={img} width={100} height={100} placeholder="blur" blurDataURL={img} />
                 <div className={styles.team}>
                   <p>{nome}</p>
                   <p>{role}</p>
